@@ -1,0 +1,30 @@
+{
+  "name": "grid-scss",
+  "version": "1.0.0",
+  "description": "Modified SCSS Grid mixin using port of the AEM responsive grid(https://github.com/jonjhiggins/aem-grid-scss)",
+  "main": "grid.scss",
+  "scripts": {
+    "build:scss": "node-sass src/scss/flexbox/grid.scss  dist/scss-grid.css --precision 8",
+    "build:scss:watch": "node-sass --watch src/scss/flexbox/grid.scss  dist/scss-grid.css --precision 8",
+    "build:less": "lessc src/less/grid.less >  dist/less-grid-original.css",
+    "build": "npm run build:scss && npm run build:less"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sesubash/grid.git"
+  },
+  "keywords": [
+    "grid",
+    "scss"
+  ],
+  "author": "Subash Selvaraj <sesubash@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sesubash/grid/issues"
+  },
+  "homepage": "https://github.com/sesubash/grid/#readme",
+  "devDependencies": {
+    "less": "^3.7.1",
+    "node-sass": "^4.14.1"
+  }
+}

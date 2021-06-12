@@ -1,0 +1,32 @@
+/* grid component */
+.grid {
+    display: block;
+    width: 100%;
+  }
+  
+  .grid::before,
+  .grid::after {
+    display: table;
+    content: " ";
+  }
+  
+  .grid::after {
+    clear: both;
+  }
+  
+  /* placeholder for new components */
+  .grid-newComponent {
+    clear: both;
+    margin: 0;
+  }
+  
+  /* column of a grid */
+  .col {
+    box-sizing: border-box;
+    clear: both;
+  }
+  
+  /* force showing hidden */
+  .gridShowHidden > .grid > .col {
+    display: block !important;
+  }

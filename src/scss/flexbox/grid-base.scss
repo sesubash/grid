@@ -1,0 +1,22 @@
+/* grid component */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+  
+  
+  /* placeholder for new components */
+  .grid-newComponent {
+    margin: 0;
+  }
+  
+  /* column of a grid */
+  .col {
+    box-sizing: border-box;
+  }
+  
+  /* force showing hidden */
+  .gridShowHidden > .grid > .col {
+    display: block !important;
+  }
