@@ -1,7 +1,7 @@
 /* Generates all the rules for the grid columns up to the given amount of column */
 @mixin generate-columns($columnTotal, $breakPoint, $column: 1) {
   @if $column <= $columnTotal {
-    > .col.col--#{$breakPoint}--#{$column} {
+    > .col.col-#{$breakPoint}-#{$column} {
       float: left;
       clear: none;
       width: ($column * 100% / $columnTotal);
@@ -14,7 +14,7 @@
 /* Generates all the rules for the grid column offset up to the given amount of column */
 @mixin generate-offsets($columnTotal, $breakPoint, $column: 0) {
   @if $column <= $columnTotal {
-    > .col.col--offset--#{$breakPoint}--#{$column} {
+    > .col.col-offset-#{$breakPoint}-#{$column} {
       margin-left: ($column * 100% / $columnTotal);
     }
 
@@ -25,12 +25,12 @@
 /* Generates all the rules for the grid and columns for the given break point and total of columns */
 @mixin generate-grid-columns($breakPoint, $columnTotal) {
   @if $columnTotal > 0 {
-    &.grid--#{$columnTotal} {
+    &.grid-#{$columnTotal} {
       @include generate-columns($columnTotal, $breakPoint);
       @include generate-offsets($columnTotal, $breakPoint);
     }
 
-    &.grid--#{$breakPoint}--#{$columnTotal} {
+    &.grid-#{$breakPoint}-#{$columnTotal} {
       @include generate-columns($columnTotal, $breakPoint);
       @include generate-offsets($columnTotal, $breakPoint);
     }
@@ -49,13 +49,13 @@
 @mixin generate-grid($breakPoint, $columnTotal) {
   @include grid-loop($breakPoint, $columnTotal);
 
-  > .col.col--#{$breakPoint}--newline {
+  > .col.col-#{$breakPoint}-newline {
     /* newline behavior */
     display: block;
     clear: both !important;
   }
 
-  > .col.col--#{$breakPoint}--none {
+  > .col.col-#{$breakPoint}-none {
     /* none behavior */
     display: block;
     clear: none !important; // Prevent the clear:both effect of another breakpoint new line
@@ -64,7 +64,7 @@
 }
 
 @mixin generate-grid-hide($breakPoint) {
-  > .col.col--#{$breakPoint}--hide {
+  > .col.col-#{$breakPoint}-hide {
     /* hide behavior */
     display: none;
   }
