@@ -3,7 +3,8 @@
   @include generate-grid(xs, $max_col_xs);
   width: auto;
 }
-@media (min-width: 320px) {
+
+@media (min-width: $breakpoint-xs) {
   .grid {
     @include generate-grid-hide(xs);
   }
@@ -17,7 +18,7 @@
 }
 
 /* sm breakpoint */
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-sm) {
   .grid {
     @include generate-grid(sm, $max_col_sm);
     @include generate-grid-hide(sm);
@@ -31,7 +32,7 @@
 }
 
 /* md breakpoint */
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-md) {
   .grid {
     @include generate-grid(md, $max_col_md);
     @include generate-grid-hide(md);
@@ -40,6 +41,34 @@
     .col {
       padding-left: $grid-gutter-width-md/2;
       padding-right: $grid-gutter-width-md/2;
+    }
+  }
+}
+
+/* lg breakpoint */
+@media (min-width: $breakpoint-lg) {
+  .grid {
+    @include generate-grid(lg, $max_col_lg);
+    @include generate-grid-hide(lg);
+  }
+  [class*=grid-lg] {
+    .col {
+      padding-left: $grid-gutter-width-lg/2;
+      padding-right: $grid-gutter-width-lg/2;
+    }
+  }
+}
+
+/* xl breakpoint */
+@media (min-width: $breakpoint-xl) {
+  .grid {
+    @include generate-grid(xl, $max_col_xl);
+    @include generate-grid-hide(xl);
+  }
+  [class*=grid-xl] {
+    .col {
+      padding-left: $grid-gutter-width-xl/2;
+      padding-right: $grid-gutter-width-xl/2;
     }
   }
 }

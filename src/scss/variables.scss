@@ -1,8 +1,19 @@
 /* maximum amount of grid cells to be provided */
+
+$breakpoint-xs: 320px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1440px;
+
 $max_col_xs: 6 !default;
 $max_col_sm: 16 !default;
 $max_col_md: 16 !default;
+$max_col_lg: 16 !default;
+$max_col_xl: 16 !default;
 
 $grid-gutter-width-xs: 16px;
 $grid-gutter-width-sm: 20px;
 $grid-gutter-width-md: 12px;
+$grid-gutter-width-lg: 12px;
+$grid-gutter-width-xl: 12px;
